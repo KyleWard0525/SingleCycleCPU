@@ -81,6 +81,7 @@ begin
     begin
         wait for clock_cycle;
         clock <= not clock;
+        writeData <= std_logic_vector(unsigned(writeData) + 1); --  Increment data
     end process;
     
     --  Create Program Counter (PC)
@@ -156,6 +157,15 @@ begin
         opcode => opcode,
         ALUop => ALUop,
         ALUopcode => ALUopcode
+    );
+    
+    --  Create ALU
+    i_alu : entity work.alu(rtl) port map (
+        opcode => ALUopcode,
+        a => regAOut,
+        b => regBOut,
+        output => ALUoutput,
+        z_out => ALUzout
     );
 
 end Behavioral;
