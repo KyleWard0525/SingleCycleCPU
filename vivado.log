@@ -1,0 +1,588 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Apr  6 18:57:49 2021
+# Process ID: 21312
+# Current directory: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5888 C:\Users\user\Documents\Classes\Spring 2021\Computer Organization\VHDL\SingleCycleCPU\SingleCycleCPU.xpr
+# Log file: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/vivado.log
+# Journal file: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+ERROR: [VRFC 10-1471] type error near opcode ; current type std_logic_vector; expected type string [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd:45]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd:38]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+ERROR: [VRFC 10-1471] type error near opcode ; current type std_logic_vector; expected type string [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd:45]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd:38]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xelab -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_tb
+Built simulation snapshot ALU_TB_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/user/Documents/Classes/Spring -notrace
+couldn't read file "C:/Users/user/Documents/Classes/Spring": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr  6 19:00:05 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_TB_behav -key {Behavioral:sim_1:Functional:ALU_TB} -tclbatch {ALU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source ALU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ALU performed ADD operation
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1016.141 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xelab -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_tb
+Built simulation snapshot ALU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: ALU performed ADD operation
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 100 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 200 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 300 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 400 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 500 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 600 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 700 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 800 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 900 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 1 us  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1016.141 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xelab -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_tb
+Built simulation snapshot ALU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: ALU performed ADD operation
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 100 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 200 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 300 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 400 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 500 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 600 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 700 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 800 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 900 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 1 us  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1016.141 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xelab -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_tb
+Built simulation snapshot ALU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: ALU performed AND operation
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed AND operation
+Time: 100 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed OR operation
+Time: 200 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 300 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed SUB operation
+Time: 400 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed PASS operation
+Time: 500 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 600 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed OR operation
+Time: 700 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 800 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed SUB operation
+Time: 900 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed PASS operation
+Time: 1 us  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1016.141 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xelab -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_tb
+Built simulation snapshot ALU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: ALU performed AND operation
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed AND operation
+Time: 100 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed OR operation
+Time: 200 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 300 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed SUB operation
+Time: 400 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed PASS operation
+Time: 500 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 600 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed OR operation
+Time: 700 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 800 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed SUB operation
+Time: 900 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed PASS operation
+Time: 1 us  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1105.355 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ALU_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
+"xelab -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b84902d796f64d2bbfafb80122cf8be9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_tb
+Built simulation snapshot ALU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: ALU performed AND operation
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed AND operation
+Time: 100 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed OR operation
+Time: 200 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 300 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed SUB operation
+Time: 400 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed PASS operation
+Time: 500 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed NOR operation
+Time: 600 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed OR operation
+Time: 700 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed ADD operation
+Time: 800 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed SUB operation
+Time: 900 ns  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+Note: ALU performed PASS operation
+Time: 1 us  Iteration: 0  Process: /ALU_TB/i_alu/line__43  File: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1105.355 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project {C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'clock_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj clock_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.srcs/sim_1/new/clock_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.sim/sim_1/behav/xsim'
+"xelab -wto 9315a3d3900843189439e1c6cd6f6ac5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clock_tb_behav xil_defaultlib.clock_tb -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 9315a3d3900843189439e1c6cd6f6ac5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clock_tb_behav xil_defaultlib.clock_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.clock [clock_default]
+Compiling architecture behavioral of entity xil_defaultlib.clock_tb
+Built simulation snapshot clock_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "clock_tb_behav -key {Behavioral:sim_1:Functional:clock_tb} -tclbatch {clock_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source clock_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'clock_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1105.355 ; gain = 0.000
+move_files [get_files  {{C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.srcs/sim_1/new/clock.vhd}}]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7s100fgga676-2
+Top: clock
+INFO: [Device 21-403] Loading part xc7s100fgga676-2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1463.984 ; gain = 244.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.srcs/sim_1/new/clock.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'clock' (1#1) [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.srcs/sim_1/new/clock.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1513.305 ; gain = 294.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1524.863 ; gain = 305.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1524.863 ; gain = 305.836
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1524.863 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1611.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1611.273 ; gain = 392.246
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1611.273 ; gain = 505.918
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+report_drc -name drc_1 -ruledecks {default}
+Command: report_drc -name drc_1 -ruledecks default
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc completed successfully
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Apr  6 19:16:36 2021] Launched synth_1...
+Run output will be captured here: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7s100fgga676-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1630.910 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1630.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -jobs 6
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+[Tue Apr  6 19:17:47 2021] Launched impl_1...
+Run output will be captured here: C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/Test/Test.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  6 19:20:41 2021...

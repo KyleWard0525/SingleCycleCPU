@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SingleCycleCPU.srcs/sources_1/new/ALU_Control.vhd" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Program_Counter.vhd" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Instruction_Memory.vhd" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Sign_Extend.vhd" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Control_Unit.vhd" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Register_File.vhd" \
+"../../../../SingleCycleCPU.srcs/sim_1/new/CPU_TB.vhd" \
+
+# Do not sort compile order
+nosort
