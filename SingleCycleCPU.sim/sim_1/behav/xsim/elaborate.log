@@ -5,4 +5,19 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-3813] value in initialization depends on signal 'clock_freq' [C:/Users/user/Documents/Classes/Spring 2021/Computer Organization/VHDL/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/CPU_TB.vhd:40]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.Program_Counter [program_counter_default]
+Compiling architecture rtl of entity xil_defaultlib.Instruction_Memory [instruction_memory_default]
+Compiling architecture rtl of entity xil_defaultlib.Sign_Extend [sign_extend_default]
+Compiling architecture rtl of entity xil_defaultlib.Control_Unit [control_unit_default]
+Compiling architecture rtl of entity xil_defaultlib.Register_File [register_file_default]
+Compiling architecture rtl of entity xil_defaultlib.ALU_Control [alu_control_default]
+Compiling architecture rtl of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.cpu_tb
+Built simulation snapshot CPU_TB_behav
