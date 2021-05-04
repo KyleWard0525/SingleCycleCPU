@@ -49,7 +49,7 @@ begin
         if rising_edge (clk) then
         
                     
-                --  Set PC to branch targ
+                --  Set PC to branch target
                 if PCsrc = '1' then
                     curr_addr <= next_addr;
                 else 
