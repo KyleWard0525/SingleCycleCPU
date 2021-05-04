@@ -61,32 +61,26 @@ begin
         -- AND operation
         when "0000" =>
             output <= a and b;
-            report "ALU performed AND operation";
             
         -- OR operation
         when "0001" =>
             output <= a or b;
-            report "ALU performed OR operation";
             
        -- ADD operation
         when "0010" =>
             output <= std_logic_vector(unsigned(a) + unsigned(b));
-            report "ALU performed ADD operation";
         
         -- SUB operation
         when "0110" =>
             output <= std_logic_vector(unsigned(a) - unsigned(b));
-            report "ALU performed SUB operation";
         
         -- Pass b operation
         when "0111" =>
             output <= b;
-            report "ALU performed PASS operation";
         
         -- NOR operation
         when "1100" =>
             output <= a nor b;
-            report "ALU performed NOR operation";
         
         when others =>
             report "other";
