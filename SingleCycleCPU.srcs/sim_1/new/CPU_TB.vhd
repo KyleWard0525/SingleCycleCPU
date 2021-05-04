@@ -34,6 +34,16 @@ end CPU_TB;
 
 architecture Behavioral of CPU_TB is
 
+    --  std_logic_vector to string
+    function slv_to_string ( a: std_logic_vector) return string is
+        variable b : string (a'length-1 downto 1) := (others => NUL);
+    begin
+        for i in a'length-1 downto 1 loop
+        b(i) := std_logic'image(a((i-1)))(2);
+        end loop;
+    return b;
+    end function;
+
     --  Clock signals
     signal clock : std_logic := '0';
     signal clock_freq : integer := 100; --  100MHz
@@ -63,7 +73,7 @@ architecture Behavioral of CPU_TB is
     signal ALUop : std_logic_vector(1 downto 0);
     signal Reg2Loc : std_logic;
     signal ALUsrc : std_logic;
-    signal PCsrc : std_logic;
+    signal PCsrc : std_logic := '0';
     signal MemRead : std_logic;
     signal MemWrite : std_logic;
     signal MemToReg : std_logic;
@@ -75,6 +85,8 @@ architecture Behavioral of CPU_TB is
     signal ALUoutput : std_logic_vector(63 downto 0);
     signal ALUzout : std_logic;
     
+    --  Branch signals
+    signal branchTarg : std_logic_vector(63 downto 0);
 
 begin
 
@@ -90,6 +102,7 @@ begin
     (
         clk => clock,
         next_addr => next_pc,
+        PCsrc => PCsrc, 
         curr_addr => pc
     );
     
@@ -101,7 +114,7 @@ begin
     
     --  Sign-extend the current instruction
     i_se : entity work.sign_extend(rtl) port map (
-        input => curr_instr,
+        input => curr_instr(31 downto 0),
         output => se_instr
     );
     
@@ -138,7 +151,6 @@ begin
         end if;
         
         regW <= curr_instr(4 downto 0); --  Write register
-    --wait for 1ns;
     end process;
     
     --  Read/Write to or from Register File
@@ -162,8 +174,6 @@ begin
     --  Determine 2nd operand for ALU
     process(clock) is
     begin
-        
-        writeData <= std_logic_vector(unsigned(writeData) + 1); --  Increment data
         
         --  Operand comes from Read data 2
         if ALUSrc = '0' then
@@ -189,16 +199,27 @@ begin
     
     --  Check ALU output
     process(clock) is
-    
-    variable branchResult : std_logic_vector(63 downto 0);
-    
+        variable shifted_instr : std_logic_vector(63 downto 0);
     begin
         
-        --  Branch statement
-        if ALUzout = '1' then
-            branchResult := ALUoutput and '1'; 
+        --  Branch statement (ALUzout and Branch) = PCSrc
+        if (ALUzout and Branch) = '1' then
             
-        end if;
+            report "Sign-extended instruction: " & slv_to_string(se_instr);
+        
+            --  Compute shifted instruction
+            shifted_instr := std_logic_vector(unsigned(se_instr) sll 2);
+            
+            report "Shifted instruction: " & slv_to_string(shifted_instr);
+        
+            --  Compute branch target using adder with inputs pc and shifted_instr
+            branchTarg <= std_logic_vector(unsigned(pc) + unsigned(shifted_instr)); 
+            
+            --  Set next_pc
+            next_pc <= branchTarg;
+            
+          end if;
+    
     
     end process; 
     
