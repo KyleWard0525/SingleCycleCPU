@@ -71,8 +71,10 @@ architecture Behavioral of CPU_TB is
     
     --  ALU signals
     signal ALUopcode : std_logic_vector(3 downto 0);
+    signal ALUoperand2 : std_logic_vector(63 downto 0);
     signal ALUoutput : std_logic_vector(63 downto 0);
     signal ALUzout : std_logic;
+    
 
 begin
 
@@ -81,7 +83,6 @@ begin
     begin
         wait for clock_cycle;
         clock <= not clock;
-        writeData <= std_logic_vector(unsigned(writeData) + 1); --  Increment data
     end process;
     
     --  Create Program Counter (PC)
@@ -122,9 +123,8 @@ begin
     );
     
     --  Deconstruct instruction operands
-    process is 
+    process(clock) is 
     begin
-        
         regA <= curr_instr(9 downto 5); --  Value for Register A
         
         --  Check Reg2Loc flag
@@ -138,7 +138,7 @@ begin
         end if;
         
         regW <= curr_instr(4 downto 0); --  Write register
-    wait for 1ns;
+    --wait for 1ns;
     end process;
     
     --  Read/Write to or from Register File
@@ -159,13 +159,49 @@ begin
         ALUopcode => ALUopcode
     );
     
+    --  Determine 2nd operand for ALU
+    process(clock) is
+    begin
+        
+        writeData <= std_logic_vector(unsigned(writeData) + 1); --  Increment data
+        
+        --  Operand comes from Read data 2
+        if ALUSrc = '0' then
+            ALUoperand2 <= regBOut;
+        
+        --  Operand comes from immmediate field (sign extended)
+        else if ALUsrc = '1' then
+            ALUoperand2 <= se_instr;
+        end if;
+        
+    end if;
+    
+    end process;
+    
     --  Create ALU
     i_alu : entity work.alu(rtl) port map (
         opcode => ALUopcode,
         a => regAOut,
-        b => regBOut,
+        b => ALUoperand2,
         output => ALUoutput,
         z_out => ALUzout
     );
+    
+    --  Check ALU output
+    process(clock) is
+    
+    variable branchResult : std_logic_vector(63 downto 0);
+    
+    begin
+        
+        --  Branch statement
+        if ALUzout = '1' then
+            branchResult := ALUoutput and '1'; 
+            
+        end if;
+    
+    end process; 
+    
+    
 
 end Behavioral;
