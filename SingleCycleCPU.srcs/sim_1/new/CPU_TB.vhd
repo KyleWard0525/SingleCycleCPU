@@ -36,9 +36,9 @@ architecture Behavioral of CPU_TB is
 
     --  std_logic_vector to string
     function slv_to_string ( a: std_logic_vector) return string is
-        variable b : string (a'length-1 downto 1) := (others => NUL);
+        variable b : string (a'length downto 1) := (others => NUL);
     begin
-        for i in a'length-1 downto 1 loop
+        for i in a'length downto 1 loop
         b(i) := std_logic'image(a((i-1)))(2);
         end loop;
     return b;
@@ -64,7 +64,7 @@ architecture Behavioral of CPU_TB is
     signal regA : std_logic_vector(4 downto 0); --  Read register 1
     signal regB : std_logic_vector(4 downto 0); --  Read register 2
     signal regW : std_logic_vector(4 downto 0); --  Write register
-    signal writeData : std_logic_vector(63 downto 0) := (others => '0'); -- Data to write to write register
+    signal writeData : std_logic_vector(63 downto 0) := x"00000000000000af"; -- Data to write to write register
     signal regAOut : std_logic_vector(63 downto 0); --  Output of register A
     signal regBOut : std_logic_vector(63 downto 0); --  Output of register B
     
@@ -87,6 +87,9 @@ architecture Behavioral of CPU_TB is
     
     --  Branch signals
     signal branchTarg : std_logic_vector(63 downto 0);
+    
+    --  Memory signals
+    signal memOutput : std_logic_vector(63 downto 0);
 
 begin
 
@@ -114,7 +117,7 @@ begin
     
     --  Sign-extend the current instruction
     i_se : entity work.sign_extend(rtl) port map (
-        input => curr_instr(31 downto 0),
+        input => curr_instr,
         output => se_instr
     );
     
@@ -201,16 +204,14 @@ begin
     process(clock) is
         variable shifted_instr : std_logic_vector(63 downto 0);
     begin
+    
+        --writeData <= std_logic_vector(unsigned(writeData) + 1);
         
         --  Branch statement (ALUzout and Branch) = PCSrc
         if (ALUzout and Branch) = '1' then
-            
-            report "Sign-extended instruction: " & slv_to_string(se_instr);
         
             --  Compute shifted instruction
             shifted_instr := std_logic_vector(unsigned(se_instr) sll 2);
-            
-            report "Shifted instruction: " & slv_to_string(shifted_instr);
         
             --  Compute branch target using adder with inputs pc and shifted_instr
             branchTarg <= std_logic_vector(unsigned(pc) + unsigned(shifted_instr)); 
@@ -222,6 +223,16 @@ begin
     
     
     end process; 
+    
+        --  Read/Write data to or from data memory
+    i_memory : entity work.data_memory(rtl) port map (
+    
+        input_addr => ALUoutput,
+        input_data => writeData,
+        mem_write => MemWrite,
+        mem_read => MemRead,
+        mem_data => memOutput
+    );
     
     
 
