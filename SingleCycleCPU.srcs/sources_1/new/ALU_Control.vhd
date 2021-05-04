@@ -80,7 +80,9 @@ begin
                     when others =>
                     
         end case;
-    wait for 1ns;
+        
+    wait on opcode,ALUop; --    Wait for a change in input signal
+    
     end process;
 
 end rtl;
