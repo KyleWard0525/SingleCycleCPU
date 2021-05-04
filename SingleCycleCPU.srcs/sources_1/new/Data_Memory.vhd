@@ -44,14 +44,14 @@ architecture rtl of Data_Memory is
     --  Assign memory signal and initialize the first 8 bytes
     signal mem_locs : memory := (
         
-        "11110000", --  byte 0
-        "00001111", --  byte 1
-        "11111111", --  byte 2
+        "00000000", --  byte 0
+        "00000000", --  byte 1
+        "00000000", --  byte 2
         "00000000", --  byte 3
-        "10101010", --  byte 4
-        "11001100", --  byte 5
-        "11011101", --  byte 6
-        "10111011", --  byte 7
+        "00000000", --  byte 4
+        "00000000", --  byte 5
+        "00000000", --  byte 6
+        "00000000", --  byte 7
         others => "00000000" -- Initialize the remaining locations to all zeros
     );
     
