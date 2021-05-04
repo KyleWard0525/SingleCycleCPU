@@ -40,9 +40,9 @@ architecture rtl of ALU is
     signal nullout : std_logic_vector(63 downto 0) := (others => '0');
 
     function slv_to_string ( a: std_logic_vector) return string is
-        variable b : string (a'length-1 downto 1) := (others => NUL);
+        variable b : string (a'length downto 1) := (others => NUL);
     begin
-        for i in a'length-1 downto 1 loop
+        for i in a'length downto 1 loop
         b(i) := std_logic'image(a((i-1)))(2);
         end loop;
     return b;
