@@ -43,7 +43,7 @@ begin
     begin
         -- Pad output with MSB
         output <= std_logic_vector(resize(signed(input), output'length));
-        wait for 10ns;
+        wait on input;
     end process;
 
 end rtl;
