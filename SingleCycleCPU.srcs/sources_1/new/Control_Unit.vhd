@@ -63,6 +63,7 @@ begin
            MemRead <= '0';
            MemWrite <= '0';
            Branch <= '0';
+           PCsrc <= '0';
            ALUop <= "10";
         end if;
         
@@ -75,6 +76,7 @@ begin
             MemRead <= '1';
             MemWrite <= '0';
             Branch <= '0';
+            PCsrc <= '0';
             ALUop <= "00";
         end if;
         
@@ -88,6 +90,7 @@ begin
             MemRead <= '0';
             MemWrite <= '1';
             Branch <= '0';
+            PCsrc <= '0';
             ALUop <= "00";
         
         end if;
@@ -102,6 +105,7 @@ begin
             MemRead <= '0';
             MemWrite <= '0';
             Branch <= '1';
+            PCsrc <= '1';
             ALUop <= "01";
         
         end if;
