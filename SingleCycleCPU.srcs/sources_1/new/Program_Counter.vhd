@@ -31,7 +31,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity Program_Counter is
     port(
         clk : in std_logic;
-        next_addr : inout std_logic_vector(63 downto 0);
+        next_addr : in std_logic_vector(63 downto 0);
+        PCsrc : in std_logic;
         curr_addr : out std_logic_vector(63 downto 0)
     );
 end Program_Counter;
@@ -46,17 +47,21 @@ begin
     begin
         -- Only operate on rising edge
         if rising_edge (clk) then
-                curr_addr <= pc; 
-                pc <= std_logic_vector(unsigned(pc) + 1);
-                
-                --  Check if pc should be reset
-                if to_integer(unsigned(pc)) > max_pc then
-                    --  Reset pc
-                    pc <= x"0000000000000000";
+        
+                    
+                --  Set PC to branch targ
+                if PCsrc = '1' then
+                    curr_addr <= next_addr;
+                else 
+                    --  Increment PC by 1 
+                    curr_addr <= pc;
+                    pc <= std_logic_vector(unsigned(pc) + 1);
+                    
+                                 
                 end if;
-                
-                next_addr <= std_logic_vector(unsigned(pc) + 1);
-        end if;
+            end if;
+            
+            
     end process;
 
 end rtl;
