@@ -98,7 +98,9 @@ begin
             end loop;
     end if;   
     end if;
-    wait for 10ns; 
+    
+    wait on input_addr, input_data, mem_write, mem_read; -- Wait for change in input signals
+    
     end process;
     
     
