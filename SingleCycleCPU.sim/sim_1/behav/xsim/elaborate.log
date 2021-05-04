@@ -19,5 +19,6 @@ Compiling architecture rtl of entity xil_defaultlib.Control_Unit [control_unit_d
 Compiling architecture rtl of entity xil_defaultlib.Register_File [register_file_default]
 Compiling architecture rtl of entity xil_defaultlib.ALU_Control [alu_control_default]
 Compiling architecture rtl of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture rtl of entity xil_defaultlib.Data_Memory [data_memory_default]
 Compiling architecture behavioral of entity xil_defaultlib.cpu_tb
 Built simulation snapshot CPU_TB_behav
