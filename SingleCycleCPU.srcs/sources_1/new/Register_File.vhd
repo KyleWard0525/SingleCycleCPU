@@ -66,6 +66,8 @@ begin
               end if;
               
            end if;
-    wait for 1ns;
+   
+    wait on reg_write_enable, reg_a_sel, reg_b_sel, reg_write_sel, input_data; --  Wait for input signals to change
+   
     end process;
 end rtl;
