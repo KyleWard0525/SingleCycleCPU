@@ -37,6 +37,8 @@ end ALU;
 
 architecture rtl of ALU is
 
+    signal nullout : std_logic_vector(63 downto 0) := (others => '0');
+
     function slv_to_string ( a: std_logic_vector) return string is
         variable b : string (a'length-1 downto 1) := (others => NUL);
     begin
@@ -94,9 +96,12 @@ begin
     --  Assert zero output
     if output = x"0000000000000000" then
         z_out <= '1';
-    end if;
-       
-    wait for 10ns;
+    else 
+        z_out <= '0';
+    end if; 
+
+    
+    wait on a,b,opcode; -- Wait for input signal to change 
     end process;
 
 
