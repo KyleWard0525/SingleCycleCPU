@@ -1,0 +1,217 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7s100fgga676-2",
+      "name": "BlockDesign",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1"
+    },
+    "design_tree": {
+      "ALU_0": "",
+      "Program_Counter": "",
+      "Instruction_Memory": "",
+      "Register_File": "",
+      "regASel": "",
+      "regBSel": "",
+      "regWrite": ""
+    },
+    "components": {
+      "ALU_0": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "xci_name": "BlockDesign_ALU_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "opcode": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "a": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "output": {
+            "direction": "IO",
+            "left": "63",
+            "right": "0"
+          },
+          "z_out": {
+            "direction": "IO"
+          }
+        }
+      },
+      "Program_Counter": {
+        "vlnv": "xilinx.com:module_ref:Program_Counter:1.0",
+        "xci_name": "BlockDesign_Program_Counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Program_Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "next_addr": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "PCsrc": {
+            "direction": "I"
+          },
+          "curr_addr": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          }
+        }
+      },
+      "Instruction_Memory": {
+        "vlnv": "xilinx.com:module_ref:Instruction_Memory:1.0",
+        "xci_name": "BlockDesign_Instruction_Memory_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Instruction_Memory",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "instr_addr": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "instruction": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_File": {
+        "vlnv": "xilinx.com:module_ref:Register_File:1.0",
+        "xci_name": "BlockDesign_Register_File_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register_File",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reg_write_enable": {
+            "direction": "I"
+          },
+          "reg_a_sel": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "reg_b_sel": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "reg_write_sel": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "input_data": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "reg_a_out": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "reg_b_out": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          }
+        }
+      },
+      "regASel": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "BlockDesign_regASel_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "9"
+          },
+          "DIN_TO": {
+            "value": "5"
+          }
+        }
+      },
+      "regBSel": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "BlockDesign_regBSel_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "20"
+          },
+          "DIN_TO": {
+            "value": "16"
+          }
+        }
+      },
+      "regWrite": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "BlockDesign_regWrite_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "4"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Program_Counter_0_curr_addr": {
+        "ports": [
+          "Program_Counter/curr_addr",
+          "Instruction_Memory/instr_addr"
+        ]
+      },
+      "Instruction_Memory_instruction": {
+        "ports": [
+          "Instruction_Memory/instruction",
+          "regASel/Din",
+          "regBSel/Din",
+          "regWrite/Din"
+        ]
+      },
+      "regASel_Dout": {
+        "ports": [
+          "regASel/Dout",
+          "Register_File/reg_a_sel"
+        ]
+      },
+      "regBSel_Dout": {
+        "ports": [
+          "regBSel/Dout",
+          "Register_File/reg_b_sel"
+        ]
+      },
+      "regWrite_Dout": {
+        "ports": [
+          "regWrite/Dout",
+          "Register_File/reg_write_sel"
+        ]
+      }
+    }
+  }
+}
