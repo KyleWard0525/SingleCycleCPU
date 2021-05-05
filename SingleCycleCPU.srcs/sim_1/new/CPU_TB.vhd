@@ -204,8 +204,6 @@ begin
     process(clock) is
         variable shifted_instr : std_logic_vector(63 downto 0);
     begin
-    
-        --writeData <= std_logic_vector(unsigned(writeData) + 1);
         
         --  Branch statement (ALUzout and Branch) = PCSrc
         if (ALUzout and Branch) = '1' then
@@ -224,7 +222,7 @@ begin
     
     end process; 
     
-        --  Read/Write data to or from data memory
+    --  Read/Write data to or from data memory
     i_memory : entity work.data_memory(rtl) port map (
     
         input_addr => ALUoutput,
@@ -234,6 +232,22 @@ begin
         mem_data => memOutput
     );
     
+    
+    --  Determine the value for writeData
+    process(clock) is
+    begin
+    
+        --  writeData comes from data read from memory
+        if MemToReg = '1' then
+            writeData <= memOutput;
+            
+        --  writeData comes from ALU result
+        else
+            writeData <= ALUOutput;
+        
+        end if;
+    
+    end process;
     
 
 end Behavioral;
