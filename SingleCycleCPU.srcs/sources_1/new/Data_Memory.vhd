@@ -39,7 +39,7 @@ entity Data_Memory is
 end Data_Memory;
 
 architecture rtl of Data_Memory is
-    type memory is array (999999 downto 0) of std_logic_vector(7 downto 0);
+    type memory is array (256 downto 0) of std_logic_vector(7 downto 0);
     
     
      --  std_logic_vector to string
@@ -52,7 +52,14 @@ architecture rtl of Data_Memory is
     return b;
     end function;
     
-    
+    --  Function for mapping one numeric range onto another
+    function range_map ( input_start : integer; input_end : integer; output_start: integer; output_end: integer; input: integer)
+    return integer is 
+        variable output : integer;
+    begin
+        output := output_start + ((input - input_start) * (output_end - output_start)) / (input_end - input_start);
+        return output;
+    end function;
     
     --  Assign memory signal and initialize the first 8 bytes
     signal mem_locs : memory := (
@@ -76,9 +83,14 @@ begin
         variable high : integer := 7;
         variable bytes : integer := 7;
         variable int : integer;
+        variable mapped_addr : integer;
     begin
         
+        --  Map input address to a data memory location
+        mapped_addr := range_map(0, 9999999, 0, 255, to_integer(unsigned(input_addr)));
         
+        report "Mapped address value = " & integer'image(mapped_addr);
+
         
         -- Check if instruction is read or write
         if mem_write = '1' then
@@ -88,7 +100,7 @@ begin
 
             
             --Write first byte to memory
-            mem_locs(to_integer(unsigned(input_addr))) <= input_data(high downto low);
+            mem_locs(mapped_addr) <= input_data(high downto low);
             
             for i in 1 to bytes loop
               
@@ -98,7 +110,7 @@ begin
              
               
               -- Write next bytes
-              mem_locs(to_integer(unsigned(input_addr)) + i) <= input_data(high downto low);
+              mem_locs(mapped_addr + i) <= input_data(high downto low);
               
              
             end loop;
@@ -112,7 +124,7 @@ begin
             report "Input address in mem_read = " & slv_to_string(input_addr);
             
             --Read first byte from memory
-            mem_data(high downto low) <= mem_locs(to_integer(unsigned(input_addr)));
+            mem_data(high downto low) <= mem_locs(mapped_addr);
             
             for i in 1 to bytes loop
                 --Increment byte
@@ -121,7 +133,7 @@ begin
                 
                 
                 --Read next bytes
-                mem_data(high downto low) <= mem_locs(to_integer(unsigned(input_addr) + i));
+                mem_data(high downto low) <= mem_locs(mapped_addr + i);
             
             end loop;
     end if;   
